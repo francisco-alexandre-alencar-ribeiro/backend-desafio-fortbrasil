@@ -1,0 +1,32 @@
+{
+  "name": "desafio_fortbrasil",
+  "version": "1.0.0",
+  "description": "Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francisco-alexandre-alencar-ribeiro/desafio_fortbrasil.git"
+  },
+  "author": "Alexandre Alencar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francisco-alexandre-alencar-ribeiro/desafio_fortbrasil/issues"
+  },
+  "homepage": "https://github.com/francisco-alexandre-alencar-ribeiro/desafio_fortbrasil#readme",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "consign": "^0.1.6",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.4.1"
+  }
+}
