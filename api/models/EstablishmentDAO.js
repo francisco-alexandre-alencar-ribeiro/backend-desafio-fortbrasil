@@ -7,14 +7,10 @@ module.exports = application => {
         collection: "establishment"
     };
         
-    EstablishmentDAO.findByLocalidade = (query, callback) => {
+    EstablishmentDAO.getAll = (query, callback) => {
         dbConnection((db, client) => {
             let collection = db.collection(EstablishmentDAO.collection);
-            let newQuery = {
-                localidade: new RegExp(query.place, 'i')
-                //$or: [{zipcode: new RegExp(query.place, 'i')}, {uf: new RegExp(query.place, 'i')}, {endereco: new RegExp(query.place, 'i')}, {localidade: new RegExp(query.place, 'i')}, {numero: new RegExp(query.place, 'i')}]
-            }
-            collection.find(newQuery).toArray((err, result) => {
+            collection.find({localidade: new RegExp(query.place, 'i')}).toArray((err, result) => {
                 if(callback)
                     callback(result);
                 client.close();

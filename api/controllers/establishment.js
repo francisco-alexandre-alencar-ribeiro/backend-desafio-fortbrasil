@@ -4,7 +4,7 @@ module.exports = application => {
     var controller = {};
 
     controller.getAll = (req, res, next) => {
-        EstablishmentDAO.findByLocalidade(req.query, result => res.status(200).json(result));
+        EstablishmentDAO.getAll(req.query, result => res.status(200).json(result));
     };
     controller.get = (req, res, next) => {
         EstablishmentDAO.get(req.params.id, result => res.status(200).json(result));
