@@ -10,7 +10,7 @@ module.exports = application => {
         EstablishmentDAO.get(req.params.id, result => res.status(200).json(result));
     };
     controller.save = (req, res, next) => {
-        EstablishmentDAO.save(req.body, (result) => res.status(200).json({ok: result.ok}));
+        EstablishmentDAO.save(req.body, result => res.status(200).json({ok: result.ok}));
     };
     controller.delete = (req, res, next) => {
         EstablishmentDAO.delete(req.params.id, result => res.status(200).json(result));
